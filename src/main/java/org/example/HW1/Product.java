@@ -1,4 +1,4 @@
-package org.example;
+package org.example.HW1;
 
 public abstract class Product {
     private String name;
