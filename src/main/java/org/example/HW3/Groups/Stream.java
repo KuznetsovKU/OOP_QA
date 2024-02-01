@@ -1,4 +1,4 @@
-package org.example.HW3;
+package org.example.HW3.Groups;
 
 import java.util.Iterator;
 import java.util.List;

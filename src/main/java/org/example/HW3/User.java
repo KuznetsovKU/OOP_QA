@@ -1,34 +1,18 @@
 package org.example.HW3;
 
-public class Student implements Comparable<Student>{
-    private static int IDGen;
-    private int studentID;
+public class User {
     private String firstName;
     private String lastName;
     private String middleName;
     private int age;
     private int sex;
 
-    static {
-        Student.IDGen = 1;
-
-    }
-
-    public Student(String firstName, String lastName, String middleName, int age, int sex) {
-        this.studentID = IDGen++;
+    public User(String firstName, String lastName, String middleName, int age, int sex) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
         this.age = age;
         this.sex = sex;
-    }
-
-    public int getStudentID() {
-        return studentID;
-    }
-
-    public void setStudentID(int studentID) {
-        this.studentID = studentID;
     }
 
     public String getFirstName() {
@@ -69,10 +53,5 @@ public class Student implements Comparable<Student>{
 
     public void setSex(int sex) {
         this.sex = sex;
-    }
-
-    @Override
-    public int compareTo(Student student) {
-        return Integer.compare(this.getStudentID(), student.getStudentID());
     }
 }

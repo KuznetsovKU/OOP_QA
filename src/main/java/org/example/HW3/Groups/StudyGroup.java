@@ -1,4 +1,6 @@
-package org.example.HW3;
+package org.example.HW3.Groups;
+
+import org.example.HW3.Student.Student;
 
 import java.util.Iterator;
 import java.util.List;
@@ -30,6 +32,10 @@ public class StudyGroup  implements Iterable<Student> {
 
     public void addStudentToGroup (Student student) {
         this.studentList.add(student);
+    }
+
+    public void createStudent(String firstName, String lastName, String middleName, int age, int sex) {
+        this.studentList.add(new Student(firstName, lastName, middleName, age, sex));
     }
 
     @Override

@@ -1,4 +1,7 @@
-package org.example.HW3;
+package org.example.HW3.Groups;
+
+import org.example.HW3.Student.Student;
+import org.example.HW3.UserComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,7 +30,11 @@ public class StudyGroupService {
 
     public List<Student> sortStudentsByFIO (StudyGroup studyGroup) {
         List<Student> studentList = new ArrayList<>(studyGroup.getStudentList());
-        studentList.sort(new StudentComparator());
+        studentList.sort(new UserComparator<Student>());
         return studentList;
+    }
+
+    public void createStudent(String firstName, String lastName, String middleName, int age, int sex) {
+        studyGroup.createStudent(firstName, lastName, middleName, age, sex);
     }
 }
